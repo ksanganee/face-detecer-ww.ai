@@ -1,4 +1,4 @@
-import react, { useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 
 import Amplify, { Predictions } from 'aws-amplify';
@@ -6,7 +6,7 @@ import { AmazonAIPredictionsProvider } from '@aws-amplify/predictions';
 import awsconfig from './aws-exports'
 
 Amplify.configure(awsconfig)
-Amplify.addPluggable(new AmazonAIPredictionsProvider)
+Amplify.addPluggable(new AmazonAIPredictionsProvider())
 
 function App() {
   const [name, setName] = useState("");
